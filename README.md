@@ -4,6 +4,6 @@
 A similarity-assisted variational autoencoder (saVAE) is a new method that adopts similarity information in the framework of the VAE. 
 
 ## Dependencies
-> ㅁㅇㄴ
-> ㅁㄴㅇㅁ
-> 
+* asd
+* as
+* asd
