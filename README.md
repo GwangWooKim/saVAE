@@ -17,7 +17,15 @@ All arguments of the implementation are set to reproduce the results of the pape
 
 ### Example
     $ python main.py -d Two_moons
-asd
+* `--data` (or `-d`): The data name. `Default = Two_moons`
+* `--epochs` (or `-e`): The number of iterations for training. `Default = 200`
+* `--batch_size` (or `-b`): The number of mini-batch. `Default = 128`
+* `--weight` (or `-w`): The weight between VAE and UMAP in saVAE. `Default = 1e-3`
+* `--updata_ratio` (or `-r`): The number of UMAP iterations per VAE iteration. `Default = 5`
+* `--correction`: Whether the covariate correction does or not in order to improve the similarity table of the dataset.
+* `--covariate`: Whether the covariate uses or not.
+* `--evaluation`: Whether the evaluation does or not (on the inffered latent space).   
 
+The last three default values depend on the dataset.
 
 
