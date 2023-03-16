@@ -28,8 +28,13 @@ All arguments of the implementation are set to reproduce the results of the pape
 
 The last three default values depend on the dataset.
 
-### The resulting files
+### Description of the outputs
 
-After training saVAE on the specified dataset, you will obtain 
-
-
+After training saVAE on the specified dataset, you will obtain the resulting files (dir: /output/data_name/). They can be loaded via `torch.load`.
+* `df.pt`: The used training dataset.
+* `df_.pt`: When the dataset contains some covariate information (`retina` or `heart_cell_atlas`), `df_.pt` is composed of `df.pt` and its covariate.
+* `labels.pt`: The used original (string) labels
+* `labels_.pt`: The transformed labels via `sklearn.preprocessing.LabelEncoder`.
+* `saVAE_latent.pt`: The encoded datapoints of `df.pt` from the ambient space to the learned latent one.
+* `dict_.pt`: The evaluation results by using `labels_.pt`.
+* `saVAE_rec.pt`: In case of `Two_moons`, the reconstruected data is also saved.
