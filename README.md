@@ -14,7 +14,7 @@ Other dependencies can be found at requirement.txt
 
 ## How to implement
 
-All arguments of the implementation are already set to reproduce the results of the paper. It suffices to specify '--data' (or '-d').  
+All arguments of the implementation are already set to reproduce the results of the paper. It suffices to specify `--data` (or `-d`).  
 
 ## Discussion
 
