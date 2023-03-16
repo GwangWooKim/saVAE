@@ -32,7 +32,7 @@ The last three default values depend on the dataset.
 
 After training saVAE on the specified dataset, you will obtain the resulting files (dir: /output/data_name/). You can check them via `torch.load`.
 * `df.pt`: The used training dataset.
-* `df_.pt`: When the dataset contains some covariate information (`retina` or `heart_cell_atlas`), `df_.pt` is composed of `df.pt` and its covariate.
+* `df_.pt`: When the dataset contains some covariate information (`retina` or `heart_cell_atlas`), `df_.pt` is composed of `df.pt` and its covariate. Otherwise, it is the same as 'df.pt'.
 * `labels.pt`: The used original (string) labels.
 * `labels_.pt`: The transformed labels via `sklearn.preprocessing.LabelEncoder`.
 * `saVAE_latent.pt`: The encoded datapoints of `df.pt` from the ambient space to the learned latent one.
