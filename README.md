@@ -24,8 +24,12 @@ All arguments of the implementation are set to reproduce the results of the pape
 * `--updata_ratio` (or `-r`): The number of UMAP iterations per VAE iteration. `Default = 5`
 * `--correction`: Whether the covariate correction does or not in order to improve the similarity table of the dataset.
 * `--covariate`: Whether the covariate uses or not.
-* `--evaluation`: Whether the evaluation does or not (on the inffered latent space).   
+* `--evaluation`: Whether the evaluation does or not (on the inffered latent space of saVAE).   
 
 The last three default values depend on the dataset.
+
+### The resulting files
+
+After training saVAE on the specified dataset, you will obtain 
 
 
