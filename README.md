@@ -30,7 +30,7 @@ The last three default values depend on the dataset.
 
 ### Description of the outputs
 
-After training saVAE on the specified dataset, you will obtain the resulting files (dir: /output/data_name/). They can be loaded via `torch.load`.
+After training saVAE on the specified dataset, you will obtain the resulting files (dir: /output/data_name/). You can check them via `torch.load`.
 * `df.pt`: The used training dataset.
 * `df_.pt`: When the dataset contains some covariate information (`retina` or `heart_cell_atlas`), `df_.pt` is composed of `df.pt` and its covariate.
 * `labels.pt`: The used original (string) labels.
