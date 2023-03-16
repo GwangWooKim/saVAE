@@ -115,9 +115,11 @@ def main():
     latent = z_mu.cpu().detach().numpy()
     x_hat = x_hat.cpu().detach().numpy()
 
-    torch.save(latent, f'./output/{name}/saVAE_latent.pt')
+    torch.save(X, f'./output/{name}/df.pt')
+    torch.save(X_, f'./output/{name}/df_.pt')
     torch.save(labels, f'./output/{name}/labels.pt')
     torch.save(labels_, f'./output/{name}/labels_.pt')
+    torch.save(latent, f'./output/{name}/saVAE_latent.pt')
     
     if args.data == 'Two_moons':
         torch.save(x_hat, f'./output/{name}/saVAE_rec.pt')
