@@ -16,7 +16,8 @@ Other dependencies can be found at `requirement.txt`
 All arguments of the implementation are set to reproduce the results of the paper. It is enough to specify the data name. The available datasets are `Two_moons`, `MNIST`, `cortex`, `pbmc`, `retina`, and `heart_cell_atlas`.
 
 ### Example
-  $ python main.py -d Two_moons
+    $ python main.py -d Two_moons
+asd
 
 
 
