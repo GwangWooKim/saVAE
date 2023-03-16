@@ -1,1 +1,1 @@
-# saVAE
+# saVAE (similarity-assisted variational autoencode) 
