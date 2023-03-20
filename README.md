@@ -36,5 +36,5 @@ After training saVAE on the specified dataset, you will obtain the resulting fil
 * `labels.pt`: The used original (string) labels.
 * `labels_.pt`: The transformed labels via `sklearn.preprocessing.LabelEncoder`.
 * `saVAE_latent.pt`: The encoded datapoints of `df.pt` from the ambient space to the learned latent one.
-* `dict_.pt`: The evaluation results by using `labels_.pt`.
+* `dict_.pt`: The evaluation results by using `saVAE_latent.pt` and `labels_.pt`.
 * `saVAE_rec.pt`: In case of `Two_moons`, the reconstruected data is also saved.
