@@ -71,4 +71,4 @@ plt.ylabel('UMAP_2')
 plt.tight_layout()
 ```
 
-<img src="/imgs/output.png" width="85%" height="85%">
+<img src="/imgs/output.png" width="65%" height="65%">
