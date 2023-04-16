@@ -38,3 +38,34 @@ After training saVAE on the specified dataset, you will obtain the resulting fil
 * `saVAE_latent.pt`: The encoded datapoints of `df.pt` from the ambient space to the learned latent one.
 * `dict_.pt`: The evaluation results by using `saVAE_latent.pt` and `labels_.pt`.
 * `saVAE_rec.pt`: In case of `Two_moons`, the reconstruected data is also saved.
+
+### Visualization
+
+One example to visualize the resulting output is as follows:
+
+```
+import torch
+import umap.umap_ as umap
+import matplotlib.pyplot as plt 
+from sklearn.decomposition import PCA
+
+pca = PCA(n_components=2)
+
+saVAE_latent = torch.load('saVAE_latent.pt')
+saVAE_latent_2d = umap.UMAP(random_state=42, init=pca.fit_transform(saVAE_latent), n_epochs=1000).fit_transform(saVAE_latent)
+labels_ = torch.load('labels_.pt')
+
+fig, ax = plt.subplots(1,1)
+temp = ax.scatter(saVAE_latent_2d[:, 0], saVAE_latent_2d[:, 1], s = 1.5,  cmap='Spectral', c = labels_)
+plt.tick_params(top=False,
+               bottom=False,
+               left=False,
+               right=False,
+               labelleft=False,
+               labelbottom=False)
+plt.xlabel('UMAP_1')
+plt.ylabel('UMAP_2')
+plt.tight_layout()
+```
+
+<img src="/imgs/output.png" width="85%" height="85%">
