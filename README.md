@@ -60,7 +60,12 @@ saVAE_latent_2d = umap.UMAP(random_state=42,
 labels_ = torch.load('labels_.pt')
 
 fig, ax = plt.subplots(1,1)
-temp = ax.scatter(saVAE_latent_2d[:, 0], saVAE_latent_2d[:, 1], s = 1.5,  cmap='Spectral', c = labels_)
+temp = ax.scatter(saVAE_latent_2d[:, 0], 
+                  saVAE_latent_2d[:, 1], 
+                  s = 1.5,  
+                  cmap='Spectral', 
+                  c = labels_
+                  )
 plt.tick_params(top=False,
                bottom=False,
                left=False,
