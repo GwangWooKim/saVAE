@@ -43,7 +43,7 @@ After training saVAE on the specified dataset, you will obtain the resulting fil
 
 One example to visualize the resulting output is as follows:
 
-```
+```python
 import torch
 import umap.umap_ as umap
 import matplotlib.pyplot as plt 
@@ -52,7 +52,10 @@ from sklearn.decomposition import PCA
 pca = PCA(n_components=2)
 
 saVAE_latent = torch.load('saVAE_latent.pt')
-saVAE_latent_2d = umap.UMAP(random_state=42, init=pca.fit_transform(saVAE_latent), n_epochs=1000).fit_transform(saVAE_latent)
+saVAE_latent_2d = umap.UMAP(random_state=42, 
+                            init=pca.fit_transform(saVAE_latent), 
+                            n_epochs=1000
+                            ).fit_transform(saVAE_latent)
 labels_ = torch.load('labels_.pt')
 
 fig, ax = plt.subplots(1,1)
