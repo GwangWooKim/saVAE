@@ -51,6 +51,7 @@ from sklearn.decomposition import PCA
 
 pca = PCA(n_components=2)
 
+# MNIST example
 saVAE_latent = torch.load('saVAE_latent.pt')
 saVAE_latent_2d = umap.UMAP(random_state=42, 
                             init=pca.fit_transform(saVAE_latent), 
