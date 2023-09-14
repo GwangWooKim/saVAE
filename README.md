@@ -4,6 +4,7 @@
 A similarity-assisted variational autoencoder (saVAE) is a new method that adopts similarity information in the framework of the VAE. If you want to know more details, please refer to [`saVAE_overvew.pdf`](https://github.com/GwangWooKim/saVAE/blob/main/saVAE_overview.pdf) in this repository that contains backgrounds, preliminaries, methods, results, and conclusions.
 
 ## Dependencies
+* python==3.9.13
 * torch==1.13.1
 * scanpy==1.9.3
 * loompy==3.0.7
