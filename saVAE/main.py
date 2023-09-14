@@ -41,7 +41,7 @@ def main():
     x_dim = X.size(1)
     n_cov = X_.size(1) - X.size(1)
 
-    name = 'Data_' + args.data + '_corr_' + str(args.corr) + '_cov_' + str(args.cov)
+    name = 'Data_' + args.data + '_corr_' + str(args.corr) + '_cov_' + str(args.cov) + '_seed_' + str(args.seed)
     try:
         os.makedirs(f'./output/{name}')
     except:
