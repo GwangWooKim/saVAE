@@ -21,7 +21,7 @@ def cal_reconstruction_error(x, x_hat, model_para, dist):
     elif dist == 'NB':
         return -nb_llik(x, x_hat.clamp(1e-10), model_para.exp().clamp(1e-10)).sum()
     elif dist == 'G':
-        return torch.sum((x - x_hat)**2)
+        return 0.5 * torch.sum((x - x_hat)**2)
 
 def train_VAE(x, z_mu, z_logvar, x_hat, model_para, dist, beta):
     RE = cal_reconstruction_error(x, x_hat, model_para, dist)
