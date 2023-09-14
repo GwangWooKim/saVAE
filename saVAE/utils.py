@@ -174,7 +174,7 @@ def make_tuple(tuple):
     epochs_per_sample[index], epochs_per_sample[index]]
 
 def cal_graph(data, random_state = 42):
-    graph = umap.UMAP(random_state = 42, 
+    graph = umap.UMAP(random_state = random_state, 
     min_dist = 0.0, 
     n_neighbors = 30,  
     transform_mode='graph',
