@@ -86,10 +86,10 @@ def main():
             torch.save(labels, f'./output/{name}/labels.pt')
             torch.save(labels_, f'./output/{name}/labels_.pt')
         else:
-            arr = cal_graph(latent)
+            arr = cal_graph(latent, random_state = args.seed)
     
     if arr is None:
-        arr = cal_graph(torch.log(1+X) if log_transform else X)
+        arr = cal_graph(torch.log(1+X) if log_transform else X, random_state = args.seed)
     
     model = VAE(
                 x_dim = x_dim,
