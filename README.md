@@ -81,3 +81,7 @@ plt.tight_layout()
 <img src="/imgs/output.png" width="65%" height="65%">
 
 Note that we don't have to do dimension reduction in case of `Two_moons`, because its latent dimension is 2.
+
+### Customization
+
+See [here](https://github.com/GwangWooKim/saVAE/issues/1)
