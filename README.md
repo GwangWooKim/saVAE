@@ -11,7 +11,7 @@ A similarity-assisted variational autoencoder (saVAE) is a new method that adopt
 * scvi-tools==0.20.2
 * umap-learn==0.5.3
 
-Other dependencies can be found at `requirement.txt`.
+Other dependencies can be found at `requirement.txt`. If necessary, refer to [`here`](https://github.com/GwangWooKim/saVAE/issues/2).
 
 ## How to use
 All arguments of the implementation are set to reproduce the results of the paper. It is enough to specify the data name. The available datasets are `Two_moons`, `MNIST`, `cortex`, `pbmc`, `retina`, and `heart_cell_atlas`.
